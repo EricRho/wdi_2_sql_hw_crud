@@ -1,16 +1,23 @@
 -- In case there is already a bank_homework database, drop it
-
+DROP DATABASE IF EXISTS bank_homework;
 
 -- Create a bank_homework database
-
+CREATE DATABASE bank_homework;
 
 -- Connect to the bank_homework databases
-
+\c bank_homework
 
 -- Create a payments table
+CREATE TABLE payments(
 --  The table should have columns of id, created_at, amount, payer_name,
+id SERIAL PRIMARY KEY
+, created_at TEXT
+, amount INTEGER
+, payer_name TEXT
 --  recipient_name, and description with the appropriate datatypes
-
+, recipient_name TEXT
+, description TEXT
+)
 
 -- Alter the payments table, add the column of `zipcode`
 -- to specify where the transaction was made
